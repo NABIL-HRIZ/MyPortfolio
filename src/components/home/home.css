@@ -1,0 +1,117 @@
+section.home {
+    width: min(1200px, 100%);
+    margin: auto;
+    padding: 80px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+section .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+}
+
+section .content .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section .content .infos>h2 {
+    font-size: 80px;
+    letter-spacing: 2px;
+}
+
+section .content .infos>h3 {
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+section .content .infos span {
+    background: linear-gradient(45deg, rgb(113, 113, 174), blue, white);
+    background-size: 200% auto;
+    animation: gradiantAnimation 4s linear infinite;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+section .content .infos p {
+    color: rgb(197, 195, 195);
+    margin: 30px 0;
+    border-left: 8px solid rgb(113, 113, 174);
+    padding-left: 10px;
+}
+
+section .content .infos a {
+    padding: 15px;
+    background-color: rgb(67, 67, 125);
+    color: #fff;
+    font-size: 18px;
+    width: fit-content;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: .4s ease-in-out;
+}
+
+section .content .infos a:hover {
+    box-shadow: 0px 3px 5px purple;
+    transform: scale(1.1);
+}
+
+section .content .avatar img::before {
+    position: absolute;
+    content: '';
+    background-color: blue;
+    padding: 20px;
+    border-radius: 50%;
+
+}
+
+section .content .avatar {
+    margin-left: 80px;
+    bottom: 20%;
+
+}
+
+section .content .avatar img {
+    animation: animationImg 2s infinite ease alternate;
+    width: 500px;
+    z-index: 999;
+}
+
+
+@keyframes gradiantAnimation {
+    to {
+        background-position: 200% center;
+    }
+
+}
+
+@keyframes animationImg {
+    to {
+        transform: translateY(40px);
+    }
+
+}
+
+@media (max-width:728px) {
+    section .content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    section .content .infos>h2 {
+        font-size: 50px;
+    }
+
+    section .content .infos>h3 {
+        font-size: 30px;
+    }
+
+    section .content .avatar img {
+        margin-bottom: 50px !important;
+        margin-right: 130px !important;
+    }
+}

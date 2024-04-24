@@ -1,0 +1,146 @@
+.projects {
+    padding: 60px;
+}
+
+.title {
+    color: #fff;
+}
+
+.projectList {
+    padding: 80px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    color: #fff;
+}
+
+.projectImg>img {
+    width: 250px;
+    height: 200px;
+    background: linear-gradient(45deg, rgb(113, 113, 174), blue, black);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px rgb(244, 244, 244);
+}
+
+.projectInfos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projectInfos h3 {
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.projectInfos p {
+    font-size: 15px;
+    color: rgb(235, 232, 232);
+    width: 80%;
+    text-align: start;
+}
+
+.projectInfos h4,
+h5 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.projectInfos span {
+    font-size: 20px;
+    color: rgb(197, 164, 226);
+    margin-right: 20px;
+}
+
+.projectDesc {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.projectMission,
+.projectLanguage {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.projectList.odd {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 100px;
+}
+
+.projectList.even {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.videoLink {
+    color: #fafafa;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.videoLink:hover {
+    margin-bottom: 10px;
+    border-bottom: 4px solid purple;
+
+}
+
+@media screen and (max-width: 768px) {
+    .projects {
+        padding: 40px;
+    }
+
+    .projectList {
+        padding: 60px 20px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 40px;
+    }
+
+    .projectImg>img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .projectList.odd,
+    .projectList.even {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projectList.odd {
+        margin-right: 0;
+    }
+
+    .projectInfos h3 {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    .projectInfos p {
+        font-size: 15px;
+
+    }
+
+    .projectInfos h4,
+    h5 {
+        font-size: 18px;
+    }
+
+    .projectInfos span {
+        font-size: 20px;
+        color: rgb(197, 164, 226);
+        margin-right: 20px;
+    }
+}

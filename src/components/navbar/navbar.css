@@ -1,0 +1,99 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    position: fixed;
+    padding: 20px 40px;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+header .logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+header .logo span {
+    color: rgb(114, 114, 214);
+}
+
+header .logo img {
+    width: 30px;
+    cursor: pointer;
+}
+
+header .logo img:hover {
+    transform: rotateZ(30deg);
+}
+
+header nav {
+    display: flex;
+    gap: 50px;
+    margin-right: 100px;
+}
+
+nav>span {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+    cursor: pointer;
+    color: rgb(172, 172, 170);
+}
+
+.active {
+    color: #fff;
+    box-shadow: 0 0 5px rgb(117, 118, 117);
+}
+
+.toggle-button {
+    display: none;
+    /* Initially hide on larger screens */
+    background-color: #fff;
+    /* White background */
+    padding: 5px 10px;
+    /* Add padding to make it more visible */
+    cursor: pointer;
+    font-size: 24px;
+    color: #ffff;
+    /* Black color for visibility */
+    border: none;
+    background-color: #fff;
+    /* Remove border */
+}
+
+@media screen and (max-width: 768px) {
+    header nav {
+        display: none;
+        /* Hide links on smaller screens */
+    }
+
+    .toggle-button {
+        display: block;
+        color: #fff;
+        background-color: #fff;
+        font-size: 40px;
+        /* Show toggle button on smaller screens */
+    }
+
+    .toggle-button:hover {
+        background-color: red;
+        /* Light gray background color on hover */
+    }
+
+    /* Show/hide links based on button click */
+    nav.show {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+    }
+}
